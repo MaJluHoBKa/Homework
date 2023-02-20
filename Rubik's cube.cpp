@@ -36,7 +36,6 @@ public:
 	}
 	rubiks_cube(const rubiks_cube& other)
 	{
-		this->cube = other.cube;
 		for (int i = 0; i < 6; i++)
 		{
 			for (int j = 0; j < 8; j++)
@@ -48,7 +47,6 @@ public:
 	rubiks_cube& operator=(const rubiks_cube& other)
 	{
 
-		this->cube = other.cube;
 		for (int i = 0; i < 6; i++)
 		{
 			for (int j = 0; j < 8; j++)
@@ -58,7 +56,7 @@ public:
 		}
 		return *this;
 	}
-
+	
 	void rotate_side(side side_to_rotate, int n)
 	{
 		color a, b, s;
